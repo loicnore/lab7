@@ -10,33 +10,54 @@ namespace Lab1
     {
         class A
         {
-
+            protected double[] x;
+            public double[] Linear(double a, double b)
+            {
+                if(a==0)
+                {
+                    return null;
+                }
+                return x = new double[] { -b / a };
+            }
         }
         class B : A
         {
-            public object a;
+
+            protected double Discriminant(double a,double b, double c)
+            {
+                return Math.Pow(b, 2) - 4 * a * c;
+            }
             
-        }
-        
-        class C : B
-        {
-            public object c;
+            public double[] Solution(double a, double b, double c)
+            {
+                if (a == 0)
+                {
+                    return Linear(a, b);
+                }
+                double d = Discriminant(a, b, c);
+
+                if (d < 0)
+                {
+                    return null;
+                }
+                if (d == 0)
+                {
+                    double[] dis1 = new double[1];
+                    dis1[0] = -b/(2 * a);
+                    return dis1;
+                }
+
+                d = Math.Sqrt(d);
+                double[] dis2 = new double[2];
+                dis2[0] = (-b + d) / (2 * a);
+                dis2[1] = (-b - d) / (2 * a);
+                return dis2;
+            }
         }
 
 
         static void Main(string[] args)
         {
-            A a1 = new A ();
-            B b2 = new B();
-            B b3 = new B();
-            B b4 = new B();
-            b2.a = a1;
-            b3.a = a1;
-            b4.a = b3;
-            C c5 = new C();
-            c5.a = b2;
-            c5.c = b4;
-            
 
         }
     }
