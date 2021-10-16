@@ -43,11 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ann\AnnLog.cs" />
+    <Compile Include="Ann\Line.cs" />
+    <Compile Include="Ann\Quadratic.cs" />
+    <Compile Include="core\EquationInterface.cs" />
+    <Compile Include="core\LogAbstract.cs" />
+    <Compile Include="core\LogInterface.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
