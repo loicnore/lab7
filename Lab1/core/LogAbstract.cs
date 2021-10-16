@@ -8,7 +8,7 @@ namespace core
     {
         protected String formatLog(String[] strings)
         {
-            return String.Join(";\n\r", strings);
+            return String.Join(".\n\r", strings);
         }
         protected void writeConsole(String s)
         {

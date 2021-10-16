@@ -15,21 +15,23 @@ namespace Ann
         {
             if (a == 0)
             {
-                return new List<float> { Convert.ToSingle(Linear(a, b)) };
+
+                return /*new List<float> {Convert.ToSingle(*/Linear(b, c)/*) }*/;
             }
             float d = (float)Discriminant(a, b, c);
+            AnnLog.I().log("Уравнение является квадратным");
 
             if (d < 0)
             {
-                return null;
+                throw new AnnException("Уравнение не имеет решений.");
             }
 
+            /*AnnLog.I().log("Уравнение имееет один корень.");*/
             if (d == 0)
             {
                 return x = new List<float> { -b / (2 * a) };
+                //throw new AnnException("Уравнение имееет один корень.");
             }
-
-
             d = (float)Math.Sqrt(d);
             return x = new List<float> { (-b + d) / (2 * a), (-b - d) / (2 * a) };
         }

@@ -32,5 +32,10 @@ namespace Ann
             writeConsole(logs.ToArray());
             return this;
         }
+        //public LogInterface write(string s)
+        //{
+        //    writeConsole(s);
+        //    return this;
+        //}
     }
 }

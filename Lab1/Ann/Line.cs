@@ -1,4 +1,5 @@
-﻿using System;
+﻿using core;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,13 +8,14 @@ namespace Ann
     class Line
     {
         protected List<float> x;
-        public List<float> Linear(float a, float b)
+        public List<float> Linear(float b, float c)
         {
-            if (a == 0)
+            if (b == 0)
             {
-                return null;
+                throw new AnnException("Уравнение не существует.");
             }
-            return x = new List<float> { -b / a };
+            AnnLog.I().log("Уравнение является линейным");
+            return x = new List<float> { -b / c };
         }
     }
 }

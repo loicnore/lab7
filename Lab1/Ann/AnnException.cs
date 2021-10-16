@@ -4,8 +4,8 @@ using System.Text;
 
 namespace core
 {
-    interface EquationInterface
+    class AnnException : Exception
     {
-        List<float> Solve(float a, float b, float c);
+        public AnnException(string message) : base(message) { }
     }
 }

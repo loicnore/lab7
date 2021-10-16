@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ann\AnnException.cs" />
     <Compile Include="Ann\AnnLog.cs" />
     <Compile Include="Ann\Line.cs" />
     <Compile Include="Ann\Quadratic.cs" />
